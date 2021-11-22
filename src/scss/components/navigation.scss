@@ -1,0 +1,114 @@
+.navigation
+{
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    padding: 2rem 0;
+    transition: .5s;
+    z-index: 10;
+    background: linear-gradient(to right, $color-blue2, $color-blue);
+
+    &__logo{
+        margin-left: 0;
+        margin-right: auto;
+
+        img{
+            max-height: 6.5rem;
+            float: left;
+            width: auto;
+            vertical-align: middle;
+            transition: .5s;
+        }
+    }
+
+    &__social{
+        display: inline-flex;
+        margin-right: 0;
+        margin-left: auto;
+        width: auto;
+        justify-content: flex-end;
+
+        a{
+            margin: auto .5rem;
+            vertical-align: middle;
+            transition: .5s;
+
+            &:last-child{
+                margin-right: 0 !important;
+            }
+
+            img{
+                height: 4rem;
+                width: auto;
+                opacity: 1;
+                transition: .5s;
+            } 
+
+            &:hover{
+                img{
+                    opacity: .7;
+                }
+            }
+        }
+    }
+
+    &__menu{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+
+        a{
+            p{
+                color: $color-white;
+                text-align: center;
+                padding: 0 2rem;
+                font-size: 1.5rem;
+                transition: .5s;
+                
+                &:hover{
+                    color: $color-green-light;    
+                }
+            }
+            
+            &:nth-child(2)
+            {
+                border-left: solid $color-white 2px;
+                border-right: solid $color-white 2px;
+            }
+        }
+    }
+
+    &--fix-top{
+        padding: 1.5rem 0 1rem;
+        border-bottom: 4px solid $color-white;
+
+        .navigation__logo{
+            img{
+                max-height: 5rem;
+                opacity: 0;
+    
+                &:last-child()
+                {
+                    opacity: 1;
+                }
+            }
+        }
+
+        .navigation__social{
+            a{
+                img{
+                    height: 3rem;
+                } 
+            }
+        }
+
+        .navigation__menu{
+            a{
+                p{
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+}
