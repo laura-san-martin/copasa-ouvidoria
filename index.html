@@ -71,12 +71,9 @@
                 </div>
                 <div class="col-12 col-md-6 d-flex flex-column justify-content-center">
                     <p>Olá!</p>
-                    <p>Você chegou ao canal da Ouvidoria da Copasa. A gente quer muito ouvir o que você tem a dizer. Por
-                        isso, nossos canais de atendimento e relacionamento estão sempre abertos para você.</p>
-                    <p>Para solicitar qualquer serviço, existem diversas opções disponíveis para você e que serão
-                        apresentadas aqui.</p>
-                    <p>Agora, se quiser fazer uma reclamação, elogio, sugestão, denúncia ou tirar dúvidas, você está no
-                        lugar certo.</p>
+                    <p>Você chegou ao canal da Ouvidoria da Copasa. A gente quer muito ouvir o que você tem a dizer. Por isso, nossos canais de atendimento e relacionamento estão sempre abertos para você.</p>
+                    <p>Para solicitar qualquer serviço, existem diversas opções disponíveis para você e que serão apresentadas aqui.</p>
+                    <p>Agora, se quiser fazer uma reclamação, elogio, sugestão, denúncia ou tirar dúvidas, você está no lugar certo.</p>
                 </div>
             </div>
         </div>
@@ -103,8 +100,7 @@
                             <li>Envio da conta pelo e-mail.</li>
                         </ul>
 
-                        <p>Quando você solicita algum desses serviços, recebe um protocolo de atendimento. É importante
-                            anotar esse número!</p>
+                        <p>Quando você solicita algum desses serviços, recebe um protocolo de atendimento. É importante anotar esse número!</p>
                     </div>
                 </div>
             </div>
@@ -176,9 +172,7 @@
                     <img class="wow fadeInleft" src="./dist/img/pics/banner-2.png" alt="Conecte com o Chico" />
                 </div>
                 <div class="col-12 col-md-6 d-flex flex-column justify-content-between py-5">
-                    <p>Agora você conhece bem os nossos serviços e canais de atendimento. Mas, se depois de fazer sua
-                        solicitação alguma coisa ainda estiver errada, nós da Ouvidoria estamos prontos para escutar
-                        você. Você pode conversar com a gente se:</p>
+                    <p>Agora você conhece bem os nossos serviços e canais de atendimento. Mas, se depois de fazer sua solicitação alguma coisa ainda estiver errada, nós da Ouvidoria estamos prontos para escutar você. Você pode conversar com a gente se:</p>
                     <ul>
                         <li><b>Seu atendimento não for feito no prazo previsto.</b></li>
                         <li><b>Se algum serviço for mal executado.</b></li>
@@ -231,7 +225,7 @@
     <a class="anchor" id="consulta"></a>
     <section class="copasa__formulario">
         <div class="container">
-            <form class="row" action="https://wwwapp.copasa.com.br/cgi-bin/ged_copasa25.exe">
+              <form class="row" name="fouvidoria" target="_self" action="https://wwwapp.copasa.com.br/cgi-bin/ged_copasa13.exe" method="POST">
                 <div class="col-12 col-md-6">
                     <h4>QUER SABER
                         NOSSA RESPOSTA
@@ -239,16 +233,18 @@
                         DEMANDA?</h4>
                 </div>
                 <div class="col-12 col-md-6 d-flex flex-column justify-content-center copasa__formulario__inputs">
+                    <input type="hidden" name="vjdmserver_name" value="10.1.13.15">
+                    <input type="hidden" name="vjdmpath" value="\OUVIDORIA\OUVIDORIA">
                     <p><b>Preencha os dados</b></p>
                     <div class="copasa__formulario__input">
-                        <label for="VJDM_PROCESSO">Nº da demanda</label>
-                        <input name="VJDM_PROCESSO" type="text" pattern="[0-9]+">
+                        <label for="processo">Nº da Demanda</label>
+                        <input id="processo" class="form-control focus" name="vjdm_processo" type="text">
                     </div>
                     <div class="copasa__formulario__input">
-                        <label for="VJDM_SENHA">Senha de acesso</label>
-                        <input name="VJDM_SENHA" type="password">
+                        <label for="senha">Senha de acesso</label>
+                        <input id="senha" class="form-control focus" name="vjdm_senha" type="password">
                     </div>
-                    <input type="submit" value="Enviar">
+                    <input type="submit" value="Enviar" value="Consultar" name="Enviar">
                 </div>
             </form>
         </div>
@@ -266,11 +262,11 @@
                         target="_blank">Sugestão</a>
                 </div>
                 <div class="col-12 col-sm-6 col-md-3">
-                    <a class="copasa__cta bg-yellow" href="https://wwwapp.copasa.com.br/servicos/copasaouvidoria/_denuncia.html"
+                    <a class="copasa__cta bg-yellow" href="https://wwwapp.copasa.com.br/servicos/copasaouvidoria/frame.html"
                         target="_blank">Denúncia</a>
                 </div>
                 <div class="col-12 col-sm-6 col-md-3">
-                    <a class="copasa__cta bg-red" href="https://wwwapp.copasa.com.br/servicos/copasaouvidoria/_reclamacao.html"
+                    <a class="copasa__cta bg-red" href="https://wwwapp.copasa.com.br/servicos/copasaouvidoria/frame.html"
                         target="_blank">Reclamação</a>
                 </div>
             </div>
